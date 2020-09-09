@@ -1,5 +1,6 @@
 if [[ `pwd` == *"r2s"* ]]; then
   git clone https://github.com/NateLol/luci-app-oled
+  sed -i "s/option enable '0'/option enable '1'/g" luci-app-oled/root/etc/config/oled
 fi
 git clone https://github.com/destan19/OpenAppFilter
 git clone https://github.com/rufengsuixing/luci-app-adguardhome
