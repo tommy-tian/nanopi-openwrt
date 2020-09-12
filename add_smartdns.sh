@@ -227,5 +227,5 @@ speed-check-mode tcp:443,ping
 git clone -b openwrt-18.06 https://github.com/project-openwrt/openwrt.git
 cat smartdns/package/openwrt/files/etc/config/smartdns > openwrt/package/ntlf9t/smartdns/conf/smartdns.conf
 cat smartdns/package/openwrt/custom.conf > openwrt/package/ntlf9t/smartdns/conf/custom.conf
-git clone -b lede --single-branch https://github.com/pymumu/luci-app-smartdns friendlywrt-rk3328/friendlywrt/package/luci-app-smartdns
+mv openwrt/package/ntlf9t/luci-app-smartdns friendlywrt-rk3328/friendlywrt/package/luci-app-smartdns
 mv openwrt/package/ntlf9t/smartdns friendlywrt-rk3328/friendlywrt/package
