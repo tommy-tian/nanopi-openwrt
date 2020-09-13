@@ -50,39 +50,46 @@ config openclash 'config'
     option en_mode 'redir-host-mix'
     option stack_type 'system'
     option config_reload '1'
+
 config dns_servers
     option group 'nameserver'
     option type 'udp'
     option enabled '0'
     option ip '114.114.114.114'
+
 config dns_servers
     option group 'nameserver'
     option type 'udp'
     option ip '119.29.29.29'
     option enabled '0'
+
 config dns_servers
     option ip '8.8.8.8'
     option port '853'
     option type 'tls'
     option enabled '0'
     option group 'fallback'
+
 config dns_servers
     option ip '1.1.1.1/dns-query'
     option type 'https'
     option enabled '0'
     option group 'fallback'
+
 config dns_servers
     option ip '1.1.1.1'
     option port '853'
     option type 'tls'
     option enabled '0'
     option group 'fallback'
+
 config dns_servers
     option enabled '1'
     option group 'nameserver'
     option ip '127.0.0.1'
     option port '6053'
     option type 'tcp'
+
 config dns_servers
     option enabled '1'
     option ip '127.0.0.1'
