@@ -1,5 +1,6 @@
 if [[ `pwd` == *"rk3328"* ]]; then
   rm -rf luci-app-oled/ && git clone https://github.com/NateLol/luci-app-oled
+  sed -i "s/option enable '0'/option enable '1'/g" luci-app-oled/root/etc/config/oled
 fi
 [ ! -d luci-app-adguardhome ] && git clone https://github.com/rufengsuixing/luci-app-adguardhome
 [ ! -d luci-app-mentohust ] && git clone https://github.com/BoringCat/luci-app-mentohust
