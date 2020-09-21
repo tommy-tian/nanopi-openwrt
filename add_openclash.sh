@@ -52,36 +52,73 @@ config openclash 'config'
     option config_reload '1'
 
 config dns_servers
-    option group 'nameserver'
-    option type 'udp'
-    option enabled '0'
-    option ip '114.114.114.114'
+	option group 'nameserver'
+	option type 'udp'
+	option ip '114.114.114.114'
+	option enabled '1'
 
 config dns_servers
-    option group 'nameserver'
-    option type 'udp'
-    option ip '119.29.29.29'
-    option enabled '0'
+	option group 'nameserver'
+	option type 'udp'
+	option ip '119.29.29.29'
+	option enabled '1'
 
 config dns_servers
-    option ip '8.8.8.8'
-    option port '853'
-    option type 'tls'
-    option enabled '0'
-    option group 'fallback'
+	option group 'nameserver'
+	option type 'udp'
+	option ip '119.28.28.28'
+	option enabled '1'
 
 config dns_servers
-    option ip '1.1.1.1/dns-query'
-    option type 'https'
-    option enabled '0'
-    option group 'fallback'
+	option group 'nameserver'
+	option type 'udp'
+	option ip '223.5.5.5'
+	option enabled '1'
 
 config dns_servers
-    option ip '1.1.1.1'
-    option port '853'
-    option type 'tls'
-    option enabled '0'
-    option group 'fallback'
+	option enabled '1'
+	option group 'nameserver'
+	option ip 'doh.rixcloud.dev/dns-query'
+	option type 'https'
+
+config dns_servers
+	option type 'https'
+	option group 'fallback'
+	option enabled '1'
+	option ip 'cloudflare-dns.com/dns-query'
+
+config dns_servers
+	option group 'fallback'
+	option enabled '1'
+	option ip 'dns.google/dns-query'
+	option type 'https'
+
+config dns_servers
+	option enabled '1'
+	option group 'fallback'
+	option ip 'dns.google'
+	option port '853'
+	option type 'tls'
+
+config dns_servers
+	option enabled '1'
+	option group 'fallback'
+	option type 'https'
+	option ip '1.1.1.1/dns-query'
+
+config dns_servers
+	option enabled '1'
+	option group 'fallback'
+	option ip '1.1.1.1'
+	option port '853'
+	option type 'tls'
+
+config dns_servers
+	option enabled '1'
+	option group 'fallback'
+	option ip '8.8.8.8'
+	option port '853'
+	option type 'tls'
 
 config dns_servers
     option enabled '1'
@@ -96,7 +133,7 @@ config dns_servers
     option port '7053'
     option group 'fallback'
     option type 'tcp'
-' > OpenClash/luci-app-openclash/files/etc/config/openclash
+' > OpenClash/luci-app-openclash/root/etc/config/openclash
 mv OpenClash/luci-app-openclash friendlywrt-rk3328/friendlywrt/package
 cd friendlywrt-rk3328/friendlywrt/package/base-files/files
 mkdir -p etc/openclash/core && cd etc/openclash/core
