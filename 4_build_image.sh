@@ -1,6 +1,5 @@
 cd $1
 cd friendlywrt
-./scripts/feeds update -a && ./scripts/feeds install -a
 sed -i '/STAMP_BUILT/d' feeds/packages/utils/runc/Makefile feeds/packages/utils/containerd/Makefile #fix compile error
 cd ..
 
